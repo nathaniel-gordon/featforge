@@ -1,0 +1,16 @@
+{
+  "name": "featforge",
+  "category": "Feature Store & Distributed MLOps",
+  "architecture": "Distributed feature engineering pipeline: Ray task parallelism + Feast feature store + rolling temporal cutoff generator + RFM behavioral feature store",
+  "interface": "Python pipeline + CLI scripts",
+  "testing": "4-test pytest suite covering RFM features, behavioral features, rolling cutoffs, and label generation (pytest tests -q)",
+  "demo_cmd": "python -c \"from src.feature_engineering.rfm_features import build_rfm_features; from src.feature_engineering.behavior_features import build_behavior_features; print('FeatForge feature engineering modules loaded successfully')\"",
+  "test_cmd": "pytest tests -q",
+  "entry_points": [
+    "src/pipeline.py",
+    "src/train.py",
+    "src/predict.py",
+    "src/feature_engineering/rfm_features.py",
+    "src/feature_engineering/behavior_features.py"
+  ]
+}

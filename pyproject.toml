@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "featforge"
+version = "0.1.0"
+description = "Production Feature Store and Distributed Feature Engineering Pipeline with Ray and Feast"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Nathaniel Gordon", email = "nathanielgordon346@gmail.com" }]
+license = { text = "MIT" }
+dependencies = [
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "scikit-learn>=1.3.0",
+    "pyarrow>=14.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
